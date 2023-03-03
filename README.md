@@ -2,10 +2,10 @@
 
 This program parses and organises highlights (and notes) made on a Kindle ebook reader. These highlights are normally stored in a file called `My Clippings.txt` in the `Documents` folder of the Kindle.
 
-The program creates a new folder named `books` in its root folder, and in that folder creates a `.txt` file corresponding to the title of each book.
+The program creates a new folder named `books` in the path where it is run, and in that folder creates a `.md` file corresponding to the title of each book.
 
 ## Introduction
-The program takes the contents of a txt file and outputs them as separate text files named for each book.
+The program takes the contents of a `.txt` file and outputs them as separate Markdown (`.md`) files named for each book.
 
 Highlights on a Kindle are stored in a txt file in the following format:
 
@@ -59,16 +59,52 @@ The highlights follow a regular pattern, split by `==========`, 10 "="s. This al
 
 You should have Node installed.
 
-- run `node index.js path_to_file` where path to file is a relative or absolute path to the clippings txt file and you will see a new folder named books containing `.txt` files of your books. This folder resides in the same location as `index.js`.
+You will also need the `.txt` file of your clippings from your Kindle reader. You can easily move this onto your computer with a USB cable. This file is normally called `My Clippings.txt`
 
-For example if you have `MyClippings.txt` at `Home/Desktop/MyClippings.txt`, run:
- ```bash
+### Installation
 
- node index.js Home/Desktop/MyClippings.txt
+run:
 
- ```
+```bash
+npm install nota -g
+```
+
+This will install the tool globally. You will be able to run `nota` from anywhere in the terminal.
+
+### Commands
+
+**`nota create`**:
+
+```bash
+nota create <pathToClippingsFile>
+```
+
+uses the`.txt` file at path `pathToClippingsFile` to create a folder of books called `books` at the path where the command is run.
+
+Example:
+
+```bash
+nota create My\ Clippings.txt
+```
+
+**`nota random`**:
+
+```bash
+nota random <pathToClippingsFile> [n]
+```
+
+uses the `.txt` file at path `pathToClippings` to print `n` random highlights to the terminal. The default value of `n` is 3.
+
+Example:
+
+```bash
+nota random My\ Clippings.txt  #prints 3 random highlights from 'My Clippings.txt' to the terminal
+```
+
+![[Random Highlights Output]](/randomize.png)
 
 ## Requirements
+
 - Node.
 
 ## Issues/ Improvements
@@ -77,7 +113,8 @@ For example if you have `MyClippings.txt` at `Home/Desktop/MyClippings.txt`, run
 - There is no way to sort the highlights according to any criteria, be it when they were made or their location in the book
  
 
-## Note
+## Notes
+
 Project is still in development. Kindly report any issues.
 
 
