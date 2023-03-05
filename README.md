@@ -1,5 +1,7 @@
 # Kindle Highlights Parser
 
+![[Demo]](/nota-demo.gif)
+
 This program parses and organises highlights (and notes) made on a Kindle ebook reader. These highlights are normally stored in a file called `My Clippings.txt` in the `Documents` folder of the Kindle.
 
 The program creates a new folder named `books` in the path where it is run, and in that folder creates a `.md` file corresponding to the title of each book.
