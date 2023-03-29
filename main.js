@@ -21,8 +21,8 @@ program
     .command("random <txtFile> [number]")
     .alias("r")
     .description("print random notes to terminal. The default is 3")
-    .action((txtFile, num) => {
-        getRandomHighlights(txtFile, num)
+    .action((txtFile, number) => {
+        getRandomHighlights(txtFile, number)
     });
 
 program.parse(process.argv);
