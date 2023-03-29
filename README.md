@@ -11,8 +11,7 @@ The program takes the contents of a `.txt` file and outputs them as separate Mar
 
 Highlights on a Kindle are stored in a txt file in the following format:
 
-```
-
+```txt
 Mirrors (Eduardo Galeano)
 - Your Highlight at location 4481-4481 | Added on Wednesday, 6 November 2019 13:36:03
 
