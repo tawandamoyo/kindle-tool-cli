@@ -4,6 +4,7 @@
   "description": "A command line tool for sorting and organizing highlights and notes made on Kindle ebook readers.",
   "main": "main.js",
   "bin": "./main.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
