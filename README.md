@@ -64,10 +64,11 @@ You will also need the `.txt` file of your clippings from your Kindle reader. Yo
 
 ### Installation
 
-run:
+Clone this repo, then from the root folder run:
 
 ```bash
-npm install nota -g
+npm install
+npm link
 ```
 
 This will install the tool globally. You will be able to run `nota` from anywhere in the terminal.
